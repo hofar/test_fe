@@ -1,38 +1,453 @@
-.App {
+body {
+  max-width: 419px;
+  /* Mengatur margin menjadi auto untuk memusatkan body di tengah layar */
+  margin: 0 auto;
+}
+
+/* CSS untuk Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  /* width: 100%; */
+  width: auto;
+  padding: 0 20px;
+  /* background-color: #333; */
+  background: #FFFFFF;
+  position: relative;
+}
+
+.logo {
+  height: auto;
+  /* width: 419px; */
+  width: 160px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu-btn {
+  display: block;
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+.menu-icon {
+  display: block;
+  width: 20px;
+  height: 2px;
+  /* background-color: #fff; */
+  background-color: #000;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  /* background-color: #fff; */
+  background-color: #000;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-icon::before {
+  transform: translateY(-6px);
+}
+
+.menu-icon::after {
+  transform: translateY(6px);
+}
+
+.menu-items {
+  /* display: flex; */
+  list-style: none;
+  /* margin-left: 20px; */
+  /* opacity: 0; */
+  display: none;
+}
+
+.menu-items li {
+  margin-right: 10px;
+}
+
+.menu-items a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:checked+.menu-btn .menu-icon {
+  transform: rotate(45deg);
+  background-color: transparent;
+}
+
+.menu-toggle:checked+.menu-btn .menu-icon::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.menu-toggle:checked+.menu-btn .menu-icon::after {
+  transform: translateY(0) rotate(-45deg);
+}
+
+.menu-toggle:checked+.menu-btn .menu-icon::before,
+.menu-toggle:checked+.menu-btn .menu-icon::after {
+  opacity: 1;
+}
+
+.menu-toggle:checked~.menu-items {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 20px;
+}
+
+.menu-toggle:checked~.menu-items li {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+.menu-toggle:checked~.menu-items a {
+  color: #fff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 419px) {
+  .logo {
+    width: 100%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+  }
+
+  .menu-toggle:checked~.menu-items {
+    display: flex;
+  }
+}
+
+/* CSS untuk Section 1 */
+.section1 {
+  background-image: url('./assets/image/bg-section-1.png');
+  position: relative;
+  /* height: 418.98px; */
+  height: 550px;
+  /* width: 363.34px; */
+  width: auto;
+  background-size: cover;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: end;
+  /* align-items: center; */
+  /* text-align: center; */
+  color: #fff;
+}
+
+.section1 .box {
+  height: 250px;
+}
+
+.section1 h1 {
+  font-size: 24px;
+  font-weight: bold;
+  /* margin-bottom: 20px; */
+  margin: 10px 40px 20px 40px;
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 34px;
+}
+
+.section1 p {
+  /* font-size: 16px; */
+  margin: 0px 40px 20px 40px;
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+}
+
+button.btnScroll {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  position: absolute;
+  /* margin-bottom: -20px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  margin: auto;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05));
+  border: 0;
+  background-color: unset;
+  padding: 0px;
+}
+
+img.scroll-arrow {
+  width: 40px;
+  height: auto;
+  z-index: 1;
+  /* position: absolute; */
+  /* margin-bottom: -20px; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* left: 0; */
+  /* right: 0; */
+  /* bottom: -20px; */
+  /* margin: auto; */
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.05)); */
+}
+
+/* CSS untuk Section 2 */
+.section2 {
+  /* height: 445px; */
+  /* width: 420px; */
+  width: auto;
+  /* background-color: #f2f2f2; */
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* align-items: center; */
+  text-align: left;
+  padding: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.section2 h2 {
+  /* font-size: 24px; */
+  /* font-weight: bold; */
+  margin-bottom: 20px;
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 30px;
+  color: #029FE4;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section2 p {
+  /* font-size: 16px; */
+  /* margin-bottom: 20px; */
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 38px;
+  color: #000000;
+  margin-top: 0px;
+}
+
+.section2 p.bold {
+  font-weight: bold;
+}
+
+/* Slide section 2 */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  width: 100%;
+  /* overflow-x: scroll; */
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* CSS untuk Section 3 */
+.section3 {
+  /* height: 990px; */
+  /* width: 420px; */
+  width: auto;
+  /* background-color: #fff; */
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.core-values-image {
+  margin-right: -100px;
+}
+
+.section3 h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  /* font-weight: 500; */
+  font-size: 36px;
+  line-height: 30px;
+  color: #029FE4;
+  text-align: center;
+}
+
+.section3 p {
+  /* font-size: 16px; */
+  margin-bottom: 20px;
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #777777;
+}
+
+.section3 ul {
+  list-style-type: disc;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.section3 li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* CSS untuk Section 4 */
+.section4 {
+  /* height: 698px; */
+  /* width: 420px; */
+  width: auto;
+  /* background-color: #f2f2f2; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+  padding: 20px;
+  background: #509FDD;
+}
+
+.section4 .box {
+  /* background-color: #f2f2f2; */
+  background: #FFFFFF;
+  padding: 20px;
+}
+
+.section4 h3 {
+  /* font-size: 24px; */
+  /* font-weight: bold; */
+  margin-bottom: 20px;
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #029FE4;
+}
+
+.section4 p {
+  /* font-size: 16px; */
+  margin-bottom: 20px;
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: #303030;
+}
+
+#section4 .slider-container h2 {
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* text-align: center; */
+  color: #303030;
+}
+
+#section4 .slider-container p {
+  /* font-family: 'Rubik'; */
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #A7A7A7;
+}
+
+/* CSS untuk Section 5 */
+.section5 {
+  background-image: url('./assets/image/bg-section-5.png');
+  position: relative;
+  /* height: 100vh; */
+  /* width: 100%; */
+  width: auto;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  /* text-align: center; */
+  color: #fff;
+  padding: 20px;
+}
+
+.company-logo {
+  /* height: 60px; */
+  height: auto;
+  /* width: 60px; */
+  width: 228px;
+  /* margin-bottom: 20px; */
+}
+
+.section5 p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
 }
