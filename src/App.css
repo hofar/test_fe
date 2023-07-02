@@ -16,6 +16,7 @@ body {
   /* background-color: #333; */
   background: #FFFFFF;
   position: relative;
+  /* overflow: hidden; */
 }
 
 .logo {
@@ -128,17 +129,9 @@ body {
   text-align: center;
 }
 
-@media (max-width: 419px) {
-  .logo {
-    width: 100%;
-  }
-}
+@media (max-width: 419px) {}
 
 @media (max-width: 600px) {
-  .menu-toggle {
-    display: block;
-  }
-
   .menu-items {
     display: none;
   }
