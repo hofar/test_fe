@@ -154,7 +154,7 @@ export const Carousel = <T extends any>({
 
 interface CarouselItemProps {
     readonly isSnapPoint: boolean;
-    readonly children?: React.ReactNode;
+    readonly children: React.ReactNode;
 }
 
 export const CarouselItem = ({ isSnapPoint, children }: CarouselItemProps) => (

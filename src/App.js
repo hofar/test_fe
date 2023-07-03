@@ -77,10 +77,10 @@ function App() {
             <span className="menu-icon"></span>
           </label>
           <ul className="menu-items">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Services</a></li>
+            <li><a href="/">Contact</a></li>
           </ul>
         </nav>
         {/* ... */}
@@ -132,7 +132,7 @@ function App() {
         </ul>
         <p>Paragraf tambahan</p>
         {/* Gambar di bagian bawah */}
-        <img src={coreValueImg} alt="Core Value Image" className="core-values-image" />
+        <img src={coreValueImg} alt="Core Value" className="core-values-image" />
         {/* ... */}
       </section>
 
@@ -177,9 +177,9 @@ function App() {
         <nav className="footer-menu">
           {/* Menu footer yang dapat diklik */}
           {/* ... */}
-          <a href="#">Who We Are</a>
-          <a href="#">Our Values</a>
-          <a href="#">The Perks</a>
+          <a href="/">Who We Are</a>
+          <a href="/">Our Values</a>
+          <a href="/">The Perks</a>
         </nav>
       </section>
     </div>
