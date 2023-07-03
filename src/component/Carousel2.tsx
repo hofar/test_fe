@@ -33,7 +33,7 @@ const styles = {
         width: '50px',
         height: '50px',
         // display: 'contents',
-        position: 'absolute',
+        // position: 'absolute',
         bottom: '0',
         border: '0',
         padding: '0',
