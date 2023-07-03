@@ -24,14 +24,14 @@ function App() {
     },
     {
       id: 2,
-      title: 'What we do',
-      boldText: 'Professional Brand Management',
+      title: 'Do what you want',
+      boldText: 'Never give up',
       description: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
     },
     {
       id: 3,
-      title: 'What we do',
-      boldText: 'Professional Brand Management',
+      title: 'You are what you think',
+      boldText: 'Professional Self Management',
       description: 'Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.'
     }
   ];

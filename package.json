@@ -5,16 +5,33 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "scripts": {
-    "start": "node ./src/App.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "author": "Hofar Ismail",
   "license": "ISC",
   "dependencies": {
     "react": "^18.2.0",
-    "react-snap-carousel": "^0.3.2"
+    "react-dom": "^18.2.0",
+    "react-snap-carousel": "^0.3.2",
+    "web-vitals": "^3.3.2"
   },
   "devDependencies": {
-    "@types/react": "^18.2.14"
+    "@types/react": "^18.2.14",
+    "typescript": "^5.1.6"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

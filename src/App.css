@@ -129,15 +129,15 @@ body {
 }
 
 @media (max-width: 419px) {
-  .logo {
+  /* .logo {
     width: 100%;
-  }
+  } */
 }
 
 @media (max-width: 600px) {
-  .menu-toggle {
+  /* .menu-toggle {
     display: block;
-  }
+  } */
 
   .menu-items {
     display: none;
@@ -159,7 +159,7 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   /* align-items: center; */
   /* text-align: center; */
   color: #fff;
