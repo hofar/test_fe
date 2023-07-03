@@ -168,18 +168,13 @@ function App() {
         <img src={logoWhite} alt="Company Logo" className="company-logo" />
         {/* Dropdown dengan teks "TECHNOLOGY DEPARTMENT" */}
         {/* ... */}
-        <div className="box">
-          <select name="dropdown" id="dropdown" title="dropdown">
-            <option value="1">TECHNOLOGY DEPARTMENT</option>
-          </select>
-          <p className="w-70">Jl. Lembong No 8 Kel. Braga Kec. Sumur Bandung, Kota Bandung, Jawa Barat</p>
-        </div>
+        <p>Jl. Lembong No 8 Kel. Braga Kec. Sumur Bandung, Kota Bandung, Jawa Barat</p>
         <nav className="footer-menu">
           {/* Menu footer yang dapat diklik */}
           {/* ... */}
-          <a href="/">Who We Are</a>
-          <a href="/">Our Values</a>
-          <a href="/">The Perks</a>
+          <a href="#">Who We Are</a>
+          <a href="#">Our Values</a>
+          <a href="#">The Perks</a>
         </nav>
       </section>
     </div>
